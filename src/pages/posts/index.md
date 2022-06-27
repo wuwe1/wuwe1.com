@@ -1,8 +1,6 @@
 ---
-title: Blog -- wuwe1
+title: Blog
 display: ''
 ---
-
-# Blogs
 
 <ListPosts />

@@ -63,6 +63,7 @@ export default defineConfig({
     Markdown({
       headEnabled: true,
       wrapperClasses: 'prose',
+      wrapperComponent: 'post',
     }),
 
     // https://github.com/antfu/unocss
