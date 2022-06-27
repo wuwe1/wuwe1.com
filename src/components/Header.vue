@@ -7,6 +7,7 @@
     <a href="/">
       <img
         w10 h10
+        rounded-full
         src="/favicon.jpg"
       >
     </a>

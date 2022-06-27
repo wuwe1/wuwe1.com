@@ -62,6 +62,7 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-vue-markdown
     Markdown({
       headEnabled: true,
+      wrapperClasses: 'prose',
     }),
 
     // https://github.com/antfu/unocss

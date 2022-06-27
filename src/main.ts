@@ -5,6 +5,7 @@ import { createHead } from '@vueuse/head'
 import App from './App.vue'
 import '@unocss/reset/tailwind.css'
 import './styles/main.css'
+import './styles/markdown.css'
 import 'uno.css'
 
 const app = createApp(App)
