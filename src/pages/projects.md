@@ -1,5 +1,3 @@
 ---
-title: Projects - wuwe1
+title: Projects
 ---
-
-# Projects
