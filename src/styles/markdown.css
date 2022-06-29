@@ -1,5 +1,5 @@
 .prose a {
-  color: #00aaff;
+  color: var(--fg-deeper);
   font-weight: bold;
   border-bottom: 2px dashed #e5e5e5;
   opacity: 0.8;
