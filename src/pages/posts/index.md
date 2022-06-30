@@ -1,6 +1,6 @@
 ---
-title: Blog
-display: ''
+title: Blog -- wuwe1
+display: 'Blog'
 ---
 
 <ListPosts />
