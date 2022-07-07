@@ -1,5 +1,7 @@
 <script setup lang='ts'>
 import { noise } from '~/logics/noise'
+import { isDark } from '~/logics'
+
 const r180 = Math.PI
 const r360 = 2 * r180
 const width = window.innerWidth
@@ -10,15 +12,17 @@ const N_PARTICLES = 3000
 const N_COLORS = 12
 const particles: Particle[][] = []
 
-const palette = [
-  [254, 242, 145],
-  [253, 198, 103],
-  [182, 245, 200],
-  [84, 146, 76],
-  [221, 124, 81],
-  [253, 158, 149],
-  [112, 184, 214],
-]
+const palette = !isDark.value
+  ? [[27, 27, 27]]
+  : [
+    [254, 242, 145],
+    [253, 198, 103],
+    [182, 245, 200],
+    [84, 146, 76],
+    [221, 124, 81],
+    [253, 158, 149],
+    [112, 184, 214],
+  ]
 
 // return 0 - n
 const random = (n: number) => {
