@@ -6,3 +6,4 @@ export function formatDate(d: string | Date) {
     return date.format('MMM D')
   return date.format('MMM D, YYYY')
 }
+
