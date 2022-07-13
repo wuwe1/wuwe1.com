@@ -11,6 +11,11 @@ projects:
       link: 'https://github.com/wuwe1/tsl-vscode'
       desc: "Vscode extension for Temporal Stream Logic"
       icon: "i-mdi-application-braces-outline"
+  Online Tools:
+    - name: 'ZK Tool Box'
+      link: "https://github.com/wuwe1/zktoolbox"
+      desc: "Online Utilities for ZK"
+      icon: "i-carbon-tool-box"
 ---
 
 <ListProjects :projects="frontmatter.projects"/>
