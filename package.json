@@ -2,7 +2,7 @@
   "private": true,
   "packageManager": "pnpm@7.1.5",
   "scripts": {
-    "build": "vite-ssg build",
+    "build": "cross-env NODE_ENV=production vite-ssg build && cp _redirects dist/_redirects",
     "dev": "vite --port 3333 --open",
     "lint": "eslint .",
     "typecheck": "vue-tsc --noEmit",
@@ -25,6 +25,7 @@
     "@unocss/reset": "^0.39.3",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/test-utils": "^2.0.1",
+    "cross-env": "^7.0.3",
     "eslint": "^8.18.0",
     "fs-extra": "^10.1.0",
     "gray-matter": "^4.0.3",
