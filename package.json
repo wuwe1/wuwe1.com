@@ -2,7 +2,7 @@
   "private": true,
   "packageManager": "pnpm@7.1.5",
   "scripts": {
-    "build": "vite build",
+    "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
     "lint": "eslint .",
     "typecheck": "vue-tsc --noEmit",
@@ -37,6 +37,7 @@
     "vite": "^2.9.12",
     "vite-plugin-pages": "^0.24.2",
     "vite-plugin-vue-markdown": "^0.1.1",
+    "vite-ssg": "^0.20.2",
     "vitest": "^0.16.0",
     "vue-tsc": "^0.38.1"
   },

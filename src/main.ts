@@ -1,19 +1,22 @@
-import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
-import routes from 'virtual:generated-pages'
-import { createHead } from '@vueuse/head'
+import autoRoutes from 'virtual:generated-pages'
+import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
+
 import '@unocss/reset/tailwind.css'
 import './styles/main.css'
 import './styles/markdown.css'
 import 'uno.css'
 
-const app = createApp(App)
-const head = createHead()
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
+const routes = autoRoutes.map((i) => {
+  return {
+    ...i,
+    alias: i.path.endsWith('/')
+      ? `${i.path}index.html`
+      : `${i.path}.html`,
+  }
 })
-app.use(head)
-app.use(router)
-app.mount('#app')
+
+export const createApp = ViteSSG(
+  App,
+  { routes },
+)

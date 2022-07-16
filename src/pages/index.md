@@ -13,4 +13,6 @@ Find me on [Github](https://github.com/wuwe1).
 Mail me at [hi@wuwe1.com](mailto:hi@wuwe1.com)
 
 
-<MapTrace/>
+<ClientOnly>
+  <MapTrace/>
+</ClientOnly>

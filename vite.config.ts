@@ -16,6 +16,15 @@ export default defineConfig({
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
+  optimizeDeps: {
+    include: [
+      'vue',
+      'vue-router',
+      '@vueuse/core',
+      '@vueuse/head',
+      'dayjs',
+    ],
+  },
   plugins: [
     Vue({
       reactivityTransform: true,
@@ -28,11 +37,14 @@ export default defineConfig({
       pagesDir: 'src/pages',
       extendRoute(route) {
         const path = resolve(__dirname, route.component.slice(1))
+
         if (!path.includes('projects.md')) {
           const md = fs.readFileSync(path, 'utf8')
           const { data } = matter(md)
           route.meta = Object.assign(route.meta || {}, { frontmatter: data })
         }
+
+        return route
       },
     }),
 
