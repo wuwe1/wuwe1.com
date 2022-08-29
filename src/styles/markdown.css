@@ -1,12 +1,23 @@
+.prose {
+  --fg: #555;
+  --fg-deep: #222;
+  --fg-deeper: #000;
+  color: var(--fg);
+}
+
+html.dark .prose {
+  --fg: #bbb;
+  --fg-deep: #ddd;
+  --fg-deeper: #fff;
+}
+
 .prose a {
-  color: #00aaff;
-  font-weight: bold;
-  border-bottom: 2px dashed #e5e5e5;
-  opacity: 0.8;
+  color: var(--fg-deeper);
+  border-bottom: 2px dashed #ddd;
 }
 
 .prose a:hover {
-  opacity: 1.0;
+  border-bottom: 2px dashed #000;
 }
 
 .prose h1 {
@@ -16,4 +27,9 @@
   margin-top: 0;
   margin-bottom: 0.8em;
   line-height: 1;
+}
+
+.prose hr {
+  border: none;
+  margin-bottom: 3rem;
 }
