@@ -166,7 +166,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div fixed left-0 right-0 bottom-0 pointer-event-none class="-z-1; top-1/3">
+  <div
+    fixed left-0 right-0 bottom-0 pointer-event-none
+    class="top-1/3"
+    style="z-index: -1"
+  >
     <canvas ref="el" width="400" height="400" />
   </div>
 </template>
